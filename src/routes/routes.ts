@@ -4,12 +4,11 @@ import LoginController from "../controller/loginController";
 
 const routes = Router();
 
-routes.get('/search', UserController.search)
-routes.post('/user', UserController.create);
-// routes.update('/user',UserController.update)
-routes.delete('/user/deleteAll', UserController.delete)
-
-routes.post('/login', LoginController.login)
+routes.get('/search', new UserController().search)
+routes.post('/user', new UserController().create);
+// routes.update('/user',new UserController().update)
+routes.delete('/user/deleteAll', new UserController().delete)
+routes.post('/login', new LoginController().login)
 
 
 export default routes;

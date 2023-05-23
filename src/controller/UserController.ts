@@ -58,7 +58,6 @@ class UserController {
 
             const all = await User.find({});
             const respDelete = await User.deleteMany({});
-            //{ acknowledged: true, deletedCount: 1 }
 
             return res.json(
                 {
@@ -75,4 +74,4 @@ class UserController {
     }
 }
 
-export default new UserController();
+export default UserController;
